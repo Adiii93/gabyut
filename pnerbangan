@@ -1,0 +1,30 @@
+print("="*30,"TrustAir siap melayani anda","="*30)
+tujuanHarga = {
+    "solo" : 200000,
+    "jakarta" : 300000,
+    "jogja" : 450000,
+    "bali" : 775000,
+    "lombok" : 1000000
+}
+
+#masukkan tujuan
+tujuan=input("masukkan tujuan penerbangan anda: ")
+
+#masukkan tiket dan voucher
+tiket=int(input("masukkan jumlah tiket yang anda inginkan: "))
+voucher=input("apakah anda mempunyai voucher?(Y/N): ")
+
+#menghitung logika if
+if tujuan != "bali" and "lombok":
+    print ("Selamat anda mendapatkan tas koper special edition")
+if voucher == "Y" or "y":
+    harga=(tujuanHarga[tujuan]*tiket)-100000
+    print(f"jumlah yang dibayarkan adalah Rp. {harga}")
+if voucher == "N" or "n":
+    harga=tujuanHarga[tujuan]*tiket
+    print(f"jumlah yang dibayarkan adalah Rp. {harga}")
+if harga >= 2000000:
+    hargaAkhir = harga-(harga * 0.03)
+    print (f"selamat!! anda mendapatkan diskon sebesar 3% karena jumlah yang anda bayarkan lebih dari 2 juta. Maka total yang harus anda bayarkan adalah sebesar Rp. {hargaAkhir}")
+print("="*30,"TrustAir siap melayani anda","="*30)
+print('*'*30, "tapi boong yahahahaha", "*"*30)
